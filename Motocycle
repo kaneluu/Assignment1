@@ -1,5 +1,3 @@
-package lab2;
-
 public class Motorcycle extends MotorVehicle implements Engine {
 
 	public void start () {
