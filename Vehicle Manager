@@ -1,0 +1,168 @@
+package lab2;
+
+import java.util.Scanner;
+
+public class VehicleManager {
+	
+	public static Car [] car;
+	public static Motorcycle [] motorcycle;
+	
+	Scanner input = new Scanner (System.in);
+	
+	public void run () {
+		// instantiates three objects of Car type
+		Car car1 = new Car();
+		car1.running = false;
+		car1.color = "Red";
+		
+		Car car2 = new Car();
+		car2.running = false;
+		car2.color = "Green";
+		
+		Car car3 = new Car();
+		car3.running = false;
+		car3.color = "Blue";
+		
+		// instantiates three objects of MotorCycle type
+		Motorcycle motorcycle1 = new Motorcycle();
+		motorcycle1.running = false;
+		motorcycle1.color = "Yellow";
+		
+		Motorcycle motorcycle2 = new Motorcycle();
+		motorcycle2.running = false;
+		motorcycle2.color = "Purple";
+		
+		Motorcycle motorcycle3 = new Motorcycle();
+		motorcycle3.running = false;
+		motorcycle3.color = "Black";
+
+		// Inserting Car's objects
+		Car [] car = {car1,car2,car3};
+		// Inserting Motorcycle's objects
+		Motorcycle [] motorcycle = {motorcycle1, motorcycle2, motorcycle3};
+		
+		// Choosing which car to start
+		System.out.println("Please choose the car's number to start");	
+			int a = 1;
+			for (int i = 0; i < car.length; ++i) {
+				
+				System.out.println("Car #" + (a++) );
+}
+ 
+			int a1 = input.nextInt();
+			if (a1 == 1) {
+				car[0].running = true;
+				car[0].start();
+				} 
+			else if (a1 == 2) {
+				car[1].running = true;
+				car[1].start();
+			}
+			else if (a1 == 3) {
+				car[2].running = true;
+				car[2].start();
+			}
+			else {
+				System.out.println("Invalid number");
+				System.exit(0);
+			}
+			
+		// Choosing which motorcycle to start	
+		System.out.println("Please choose the motorcycle's number to start");
+			int b = 1;
+			for (int i = 0; i < motorcycle.length; ++i) {
+				
+				System.out.println("Motorcycle #" + (b++)  );
+}
+ 
+			int b1 = input.nextInt();
+			if (b1 == 1) {
+				motorcycle[0].running = true;
+				motorcycle[0].start();
+				} 
+			else if (b1 == 2) {
+				motorcycle[1].running = true;
+				motorcycle[1].start();
+			}
+			else if (b1 == 3) {
+				motorcycle[2].running = true;
+				motorcycle[2].start();
+			}
+			else {
+				System.out.println("Invalid number");
+				System.exit(0);
+			}
+		
+		// Choosing which car to stop	
+		System.out.println("Please choose the car's number to stop");
+			int c = 1;
+			for (int i = 0; i < car.length; ++i) {
+				
+				System.out.println("Car #" + (c++) );
+}
+ 
+			int c1 = input.nextInt();
+			if (c1 == 1) {
+				car[0].running = false;
+				car[0].stop();
+				} 
+			else if (c1 == 2) {
+				car[1].running = false;
+				car[1].stop();
+			}
+			else if (c1 == 3) {
+				car[2].running = false;
+				car[2].stop();
+			}
+			else {
+				System.out.println("Invalid number");
+				System.exit(0);
+			}
+		
+		// Choosing which motorcycle to stop	
+		System.out.println("Please choose the motorcycle's number to stop");
+			int d = 1;
+			for (int i = 0; i < motorcycle.length; ++i) {
+				
+				System.out.println("Motorcycle #" + (d++)  );
+}
+ 
+			int d1 = input.nextInt();
+			if (d1 == 1) {
+				motorcycle[0].running = false;
+				motorcycle[0].stop();
+				} 
+			else if (d1 == 2) {
+				motorcycle[1].running = false;
+				motorcycle[1].stop();
+			}
+			else if (d1 == 3) {
+				motorcycle[2].running = false;
+				motorcycle[2].stop();
+			}
+			else {
+				System.out.println("Invalid number");
+				System.exit(0);
+			}
+		// Print cars' status
+		int carnumber = 1;	
+		for (Car temp : car)	{	
+			
+			if (temp.running == true)
+				System.out.println("Car number " +  (carnumber++) + " is running ");
+			else 
+				System.out.println("Car number " +  (carnumber++) + " is not running ");
+		}
+		System.out.println("--------------------");
+		
+		// Print motorcycles' status
+		int motorcyclenumber = 1;
+		for (Motorcycle temp2 : motorcycle) {
+			
+			if (temp2.running == true)
+				System.out.println("Motorcycle number " + (motorcyclenumber++) + " is running " );
+			else 
+				System.out.println("Motorcycle number " + (motorcyclenumber++) + " is not running ");
+		}
+	}
+}
