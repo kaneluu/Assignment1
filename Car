@@ -1,0 +1,17 @@
+package lab2;
+
+public class Car extends MotorVehicle implements Engine {
+	
+	public void start () {
+		
+		running = true;
+		System.out.println("Status: " + running + "\nColor: " + color + "\nCar" + "\nStarted" ) ;
+	}
+	
+	public void stop () {
+		
+		running = false;
+		System.out.println("Status: " + running + "\nColor: " + color + "\nCar" + "\nStopped" ) ;
+	}
+	
+}
