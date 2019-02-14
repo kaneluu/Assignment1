@@ -1,0 +1,11 @@
+package lab2;
+
+public class VehicleTest {
+
+	public static void main(String[] args) {
+		
+		VehicleManager class1 = new VehicleManager();
+			class1.run();
+	}
+
+}
